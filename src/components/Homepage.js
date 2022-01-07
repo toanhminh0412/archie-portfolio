@@ -11,9 +11,6 @@ export default function Homepage() {
     const contactButtonRef = useRef();
 
     const scrollToContact = (ref) => {
-        console.log('this function is excuted')
-        // console.log(ref.current.offsetTop);
-        // window.scrollTo(0, ref.current.offsetTop);
         ref.current.scrollIntoView({behavior: "smooth", block:"center"});
     }
 

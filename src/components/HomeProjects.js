@@ -1,5 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { storage } from "../App";
+import { ref, getDownloadURL } from "firebase/storage";
+
 export default function HomeProjects() {
+    const [studybuddyURL, setStudybuddyURL] = useState('')
+    const [archmediaURL, setArchmediaURL] = useState('')
+
+    useEffect(() => {
+        const studybuddyRef = ref(storage, 'projects/studybuddy.png');
+        const archmediaRef = ref(storage, 'projects/archmedia.png');
+        getDownloadURL(studybuddyRef)
+        .then(url => {
+            setStudybuddyURL(url)
+        })
+        .catch(error => {
+            console.log(error);
+        })
+        
+        getDownloadURL(archmediaRef)
+        .then(url => {
+            setArchmediaURL(url);
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }, [])
 
     return (
         <div className='bg-blue-900 pb-20'>
@@ -8,7 +33,7 @@ export default function HomeProjects() {
                 <div className='mx-auto w-3/4 md:w-7/12 lg:w-4/12 bg-slate-800 rounded-md'>
                     <div className='w-full h-fit text-center'>
                         <a href='https://find-study-buddy.herokuapp.com/' target='_blank' rel="noopener noreferrer">
-                            <img src='img/studybuddy.png' alt='studybuddy img' className='w-11/12 mx-auto pt-3 lg:pt-6'></img>
+                            <img src={studybuddyURL} alt='studybuddy img' className='w-11/12 mx-auto pt-3 lg:pt-6'></img>
                         </a>
                     </div>
                     <div className='mx-4 lg:mx-6 mt-4 pb-4'>
@@ -23,7 +48,7 @@ export default function HomeProjects() {
                 <div className='mt-12 lg:mt-0 mx-auto w-3/4 md:w-7/12 lg:w-4/12 bg-slate-800 rounded-md'>
                     <div className='w-full h-fit text-center'>
                         <a href='https://morning-castle-13102.herokuapp.com/login' target='_blank' rel="noopener noreferrer">
-                            <img src='img/archmedia.png' alt='studybuddy img' className='w-11/12 mx-auto pt-3 lg:pt-6'></img>
+                            <img src='img/archmedia.png' alt='archmedia img' className='w-11/12 mx-auto pt-3 lg:pt-6'></img>
                         </a>
                     </div>
                     <div className='mx-4 lg:mx-6 mt-4 pb-4'>
