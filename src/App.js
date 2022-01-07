@@ -1,12 +1,14 @@
 import './App.css';
 import Header from './components/Header';
 import Projects from './components/Projects';
+import Posts from './components/Posts';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Homepage from './components/Homepage';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -30,6 +32,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Homepage/>}/>
         <Route path='/projects' element={<Projects/>}/>
+        <Route path='/posts' element={<Posts/>}/>
       </Routes>
     </Router>
   );
