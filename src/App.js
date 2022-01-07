@@ -4,11 +4,16 @@ import Projects from './components/Projects';
 import Posts from './components/Posts';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Homepage from './components/Homepage';
+import Login from './components/Login';
+import Edit from './components/Edit';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
+import { getAuth } from 'firebase/auth';
+import AddProject from './components/AddProject';
+import AddPost from './components/AddPost';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -27,6 +32,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
+export const auth = getAuth();
 
 function App() {
   return (
@@ -35,6 +41,10 @@ function App() {
         <Route exact path='/' element={<Homepage/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/posts' element={<Posts/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/edit' element={<Edit/>}/>
+        <Route path='/add-project' element={<AddProject/>}/>
+        <Route path='/add-post' element={<AddPost/>}/>
       </Routes>
     </Router>
   );

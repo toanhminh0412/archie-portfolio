@@ -19,6 +19,7 @@ export default function Homepage() {
             <Header reference={contactButtonRef} click={() => scrollToContact(contactRef)}/>
             <div className='h-screen relative'>
                 <img src="img/welcomebg.jpg" alt='Welcome background' className='h-full w-full'/>
+                <div className='absolute top-0 left-0 h-full w-full bg-black opacity-50'></div>
                 <div className='absolute text-center h-screen flex flex-col justify-center left-0 right-0 mx-auto top-0'>
                     <p className='uppercase font-medium text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl'>XIN CHAO, TOI LA ARCHIE!!</p>
                     <p className='uppercase font-medium text-white text-2xl md:text-3xl lg:text-4xl lg:text-5xl'>(HELLO, I'M ARCHIE!!)</p>
