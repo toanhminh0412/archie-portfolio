@@ -48,7 +48,7 @@ export default function HomeProjects() {
                 <div className='mt-12 lg:mt-0 mx-auto w-3/4 md:w-7/12 lg:w-4/12 bg-slate-800 rounded-md'>
                     <div className='w-full h-fit text-center'>
                         <a href='https://morning-castle-13102.herokuapp.com/login' target='_blank' rel="noopener noreferrer">
-                            <img src='img/archmedia.png' alt='archmedia img' className='w-11/12 mx-auto pt-3 lg:pt-6'></img>
+                            <img src={archmediaURL} alt='archmedia img' className='w-11/12 mx-auto pt-3 lg:pt-6'></img>
                         </a>
                     </div>
                     <div className='mx-4 lg:mx-6 mt-4 pb-4'>
