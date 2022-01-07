@@ -7,23 +7,27 @@ export default function HomeProjects() {
     const [archmediaURL, setArchmediaURL] = useState('')
 
     useEffect(() => {
-        const studybuddyRef = ref(storage, 'projects/studybuddy.png');
-        const archmediaRef = ref(storage, 'projects/archmedia.png');
-        getDownloadURL(studybuddyRef)
-        .then(url => {
-            setStudybuddyURL(url)
-        })
-        .catch(error => {
-            console.log(error);
-        })
+        const fetchImg = async () => {
+            const studybuddyRef = ref(storage, 'projects/studybuddy.png');
+            const archmediaRef = ref(storage, 'projects/archmedia.png');
+            await getDownloadURL(studybuddyRef)
+            .then(url => {
+                setStudybuddyURL(url)
+            })
+            .catch(error => {
+                console.log(error);
+            })
+            
+            await getDownloadURL(archmediaRef)
+            .then(url => {
+                setArchmediaURL(url);
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        }
+        fetchImg();
         
-        getDownloadURL(archmediaRef)
-        .then(url => {
-            setArchmediaURL(url);
-        })
-        .catch(error => {
-            console.log(error)
-        })
     }, [])
 
     return (
