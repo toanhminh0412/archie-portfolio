@@ -11,12 +11,12 @@ export default function Homepage() {
     const contactButtonRef = useRef();
 
     const scrollToContact = (ref) => {
-        ref.current.scrollIntoView({behavior: "smooth", block:"center"});
+        ref.current.scrollIntoView({behavior: "smooth", block:"center"});       
     }
 
     return (
         <div>
-            <Header reference={contactButtonRef} click={() => scrollToContact(contactRef)}/>
+            <Header reference={contactButtonRef} click={() => scrollToContact(contactRef)} contact={contactRef}/>
             <div className='h-screen relative'>
                 <img src="img/welcomebg.jpg" alt='Welcome background' className='h-full w-full'/>
                 <div className='absolute top-0 left-0 h-full w-full bg-black opacity-50'></div>

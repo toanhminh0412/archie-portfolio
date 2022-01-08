@@ -11,7 +11,7 @@ export default function AddPost() {
     const [createdAt, setCreatedAt] = useState('')
     const [content, setContent] = useState('')
     const navigate = useNavigate();
-    const login = window.localStorage.getItem('login')
+    const login = window.localStorage.getItem('login');
 
     const updateTitle = e => {
         setTitle(e.target.value);
@@ -43,7 +43,7 @@ export default function AddPost() {
         }
     }
 
-    if(login ==="true") {
+    if(login === "true") {
         return (
             <div >
                 <Header/>

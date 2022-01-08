@@ -41,7 +41,7 @@ export default function HomeProjects() {
                         </a>
                     </div>
                     <div className='mx-4 lg:mx-6 mt-4 pb-4'>
-                        <a href='https://find-study-buddy.herokuapp.com/' target='_blank' rel="noopener noreferrer"><h2 className='font-medium text-2xl lg:text-3xl text-white underline'>Study Buddy</h2></a>
+                        <a href='https://find-study-buddy.herokuapp.com/' target='_blank' rel="noopener noreferrer"><h2 className='font-medium hover:font-bold text-2xl lg:text-3xl text-white underline'>Study Buddy</h2></a>
                         <ul className='mt-4 font-extralight text-md lg:text-xl text-white'>
                             <li className='lg:text-lg xl:text-xl'>- Built with Reactjs, Nodejs, Firebase, styled with Tailwindcss</li>
                             <li className='mt-4 lg:text-lg xl:text-xl'>- A matchmaking application that helps students find a suitable study partner</li>
@@ -57,7 +57,7 @@ export default function HomeProjects() {
                     </div>
                     <div className='mx-4 lg:mx-6 mt-4 pb-4'>
                         <a href='https://morning-castle-13102.herokuapp.com/login' target='_blank' rel="noopener noreferrer">
-                            <h2 className='font-medium text-2xl lg:text-3xl text-white underline'>ArchMedia</h2>
+                            <h2 className='font-medium hover:font-bold text-2xl lg:text-3xl text-white underline'>ArchMedia</h2>
                         </a>
                         <ul className='mt-4 font-extralight text-md lg:text-xl text-white'>
                             <li className='lg:text-lg xl:text-xl'>- Built with Flask, styled with CSS</li>

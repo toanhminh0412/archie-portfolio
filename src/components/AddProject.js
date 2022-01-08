@@ -14,8 +14,7 @@ export default function AddProject() {
     const [description, setDescription] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
-
-    const login = window.localStorage.getItem('login')
+    const login = window.localStorage.getItem('login');
 
     const updateName = e => {
         setName(e.target.value);

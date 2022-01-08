@@ -5,7 +5,7 @@ import Homepage from "./Homepage";
 export default function Edit() {
     const login = window.localStorage.getItem('login');
 
-    if (login === "true") {
+    if (login === 'true') {
         return (
             <div>
                 <Header/>

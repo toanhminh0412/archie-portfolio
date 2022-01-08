@@ -1,4 +1,3 @@
-1. contact on dropdown scrolling
-2. add social media to footer
-3. fixed navigation bar
 4. block user from accessing edit, add-projects and add-posts if not logged in
+5. message display
+6. make contact page
