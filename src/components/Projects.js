@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 export default function Projects() {
     const [projectList, setProjectList] = useState([]);
     const navigate = useNavigate();
-    let projectId = 0
 
     const toContact = () => {
         navigate('/contact')

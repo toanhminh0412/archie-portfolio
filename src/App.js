@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from 'react';
+import React from 'react';
 import Projects from './components/Projects';
 import Posts from './components/Posts';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";

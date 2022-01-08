@@ -10,7 +10,7 @@ export default function Footer() {
                 <SocialIcon className='mr-6' url="https://www.instagram.com/archie.to.minh/" fgColor="white" target="_blank"/>
                 <SocialIcon url="https://www.facebook.com/anhto.minh/" fgColor="white" target="_blank"/>
             </div>
-            <p className='h-fit w-fit my-auto mx-auto text-white mt-4 lg:mt-8'>Copyright &copy; 2021 Archie To</p>
+            <p className='h-fit w-fit my-auto mx-auto text-white mt-4 lg:mt-8'>Copyright &copy; 2022 Archie To</p>
         </div>
     )
 }
