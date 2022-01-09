@@ -31,7 +31,7 @@ export default function Header({reference, click, contact}) {
     }
 
     return (
-        <header className="fixed z-20 w-full bg-gradient-to-r from-indigo-900 to-indigo-800 h-12 shadow-lg shadow-black show-indigo-900 flex flex-row">
+        <header className="fixed z-40 w-full bg-gradient-to-r from-indigo-900 to-indigo-800 h-12 shadow-lg shadow-black show-indigo-900 flex flex-row">
             <div className='my-auto ml-4 lg:ml-12'>
                 <a href='/'><h1 className='uppercase text-xl font-bold text-white cursor-pointer'>Archie To</h1></a>
             </div>
