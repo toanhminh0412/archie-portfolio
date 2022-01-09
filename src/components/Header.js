@@ -45,7 +45,7 @@ export default function Header({reference, click, contact}) {
                 <div ref={reference} onClick={click} className='h-12 w-fit bg-green-700 hover:bg-green-900 pt-3 px-4'>
                     <p className='text-lg text-white'>Contact</p>
                 </div>
-                {login === "false" ? 
+                {login !== "true" ? 
                 (<a href='/login'><div className='h-12 w-fit bg-amber-600 hover:bg-amber-800 pt-3 px-4'>
                 <p className='text-lg text-white'>Login</p>
             </div></a>):
